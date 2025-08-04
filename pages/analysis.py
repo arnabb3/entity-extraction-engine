@@ -29,8 +29,8 @@ if "df" not in st.session_state:
 df = st.session_state["df"]
 text_col = st.session_state["text_col"]
 rating_col = st.session_state["rating_col"]
-secondary_col = st.session_state["secondary_col"]
-meta_cols = st.session_state["meta_cols"]
+# secondary_col = st.session_state["secondary_col"]
+# meta_cols = st.session_state["meta_cols"]
 
 # Entity Input
 st.header("Add Entities to Track", divider="blue")
