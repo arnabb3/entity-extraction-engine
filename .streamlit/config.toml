@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor = "#7F5AF0"              # Soft violet (accent color)
+backgroundColor = "#0F172A"           # Deep slate/navy background
+secondaryBackgroundColor = "#1E293B"  # Slightly lighter slate panel
+textColor = "#F1F5F9"                 # Soft light gray text
+font = "sans serif"
