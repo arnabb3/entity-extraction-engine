@@ -123,6 +123,7 @@ else:
             st.session_state.highlighted_entities = []
             st.session_state.clear_entities_confirm = False
             st.session_state.clear_entities_result = "success"
+            st.session_state.batch_entities_uploaded = False
             st.rerun()
 
     with col2:
