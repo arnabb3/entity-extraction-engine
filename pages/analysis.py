@@ -77,11 +77,16 @@ if uploaded_file and not st.session_state.batch_entities_uploaded:
         progress_bar = st.progress(0, text="Parsing uploaded entities...")
 
         for i, entity in enumerate(entities_list):
+            entity = entity.strip().lower()
             time.sleep(0.01)
             progress_bar.progress((i + 1) / total, text=f"Adding: {entity[:30]}...")
             if entity not in st.session_state.entities:
-                st.session_state.entities.append(entity)
-                added += 1
+                # Check count of new entity - if less than 5, do not add.
+                if df[text_col].str.contains(re.escape(entity), case=False).sum() < 5:
+                    continue
+                else:
+                    st.session_state.entities.append(entity)
+                    added += 1
 
         progress_bar.empty()
         st.session_state.batch_entities_uploaded = True
